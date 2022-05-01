@@ -1,0 +1,40 @@
+{
+  "name": "students",
+  "infos": [
+    {
+      "id": "1001",
+      "name": "小明",
+      "gender": "男",
+      "scoreSum": "450.0",
+      "scoreAvg": "90.0"
+    },
+    {
+      "id": "1002",
+      "name": "小张",
+      "gender": "男",
+      "scoreSum": "425.0",
+      "scoreAvg": "85.0"
+    },
+    {
+      "id": "1003",
+      "name": "小李",
+      "gender": "女",
+      "scoreSum": "480.0",
+      "scoreAvg": "96.0"
+    },
+    {
+      "id": "1004",
+      "name": "小王",
+      "gender": "男",
+      "scoreSum": "390.0",
+      "scoreAvg": "78.0"
+    },
+    {
+      "id": "1005",
+      "name": "小红",
+      "gender": "女",
+      "scoreSum": "430.0",
+      "scoreAvg": "86.0"
+    }
+  ]
+}

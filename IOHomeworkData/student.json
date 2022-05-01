@@ -1,0 +1,180 @@
+{
+  "name": "students",
+  "students": [
+    {
+      "id": "1001",
+      "name": "小明",
+      "gender": "男",
+      "courseName": "Java",
+      "score": "95"
+    },
+    {
+      "id": "1001",
+      "name": "小明",
+      "gender": "男",
+      "courseName": "数据结构",
+      "score": "90"
+    },
+    {
+      "id": "1001",
+      "name": "小明",
+      "gender": "男",
+      "courseName": "Python",
+      "score": "100"
+    },
+    {
+      "id": "1001",
+      "name": "小明",
+      "gender": "男",
+      "courseName": "Unity3D",
+      "score": "80"
+    },
+    {
+      "id": "1001",
+      "name": "小明",
+      "gender": "男",
+      "courseName": "matlab",
+      "score": "85"
+    },
+    {
+      "id": "1002",
+      "name": "小张",
+      "gender": "男",
+      "courseName": "Java",
+      "score": "80"
+    },
+    {
+      "id": "1002",
+      "name": "小张",
+      "gender": "男",
+      "courseName": "数据结构",
+      "score": "85"
+    },
+    {
+      "id": "1002",
+      "name": "小张",
+      "gender": "男",
+      "courseName": "Python",
+      "score": "90"
+    },
+    {
+      "id": "1002",
+      "name": "小张",
+      "gender": "男",
+      "courseName": "Unity3D",
+      "score": "75"
+    },
+    {
+      "id": "1002",
+      "name": "小张",
+      "gender": "男",
+      "courseName": "matlab",
+      "score": "95"
+    },
+    {
+      "id": "1003",
+      "name": "小李",
+      "gender": "女",
+      "courseName": "Java",
+      "score": "100"
+    },
+    {
+      "id": "1003",
+      "name": "小李",
+      "gender": "女",
+      "courseName": "数据结构",
+      "score": "95"
+    },
+    {
+      "id": "1003",
+      "name": "小李",
+      "gender": "女",
+      "courseName": "Python",
+      "score": "100"
+    },
+    {
+      "id": "1003",
+      "name": "小李",
+      "gender": "女",
+      "courseName": "Unity3D",
+      "score": "90"
+    },
+    {
+      "id": "1003",
+      "name": "小李",
+      "gender": "女",
+      "courseName": "matlab",
+      "score": "95"
+    },
+    {
+      "id": "1004",
+      "name": "小王",
+      "gender": "男",
+      "courseName": "Java",
+      "score": "80"
+    },
+    {
+      "id": "1004",
+      "name": "小王",
+      "gender": "男",
+      "courseName": "数据结构",
+      "score": "80"
+    },
+    {
+      "id": "1004",
+      "name": "小王",
+      "gender": "男",
+      "courseName": "Python",
+      "score": "75"
+    },
+    {
+      "id": "1004",
+      "name": "小王",
+      "gender": "男",
+      "courseName": "Unity3D",
+      "score": "70"
+    },
+    {
+      "id": "1004",
+      "name": "小王",
+      "gender": "男",
+      "courseName": "matlab",
+      "score": "85"
+    },
+    {
+      "id": "1005",
+      "name": "小红",
+      "gender": "女",
+      "courseName": "Java",
+      "score": "95"
+    },
+    {
+      "id": "1005",
+      "name": "小红",
+      "gender": "女",
+      "courseName": "数据结构",
+      "score": "100"
+    },
+    {
+      "id": "1005",
+      "name": "小红",
+      "gender": "女",
+      "courseName": "Python",
+      "score": "80"
+    },
+    {
+      "id": "1005",
+      "name": "小红",
+      "gender": "女",
+      "courseName": "Unity3D",
+      "score": "70"
+    },
+    {
+      "id": "1005",
+      "name": "小红",
+      "gender": "女",
+      "courseName": "matlab",
+      "score": "85"
+    }
+  ]
+}

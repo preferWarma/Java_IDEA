@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<students>
+  <student>
+    <id>1001</id>
+    <name>小明</name>
+    <gender>男</gender>
+    <scoreSum>450.0</scoreSum>
+    <scoreAvg>90.0</scoreAvg>
+  </student>
+  <student>
+    <id>1002</id>
+    <name>小张</name>
+    <gender>男</gender>
+    <scoreSum>425.0</scoreSum>
+    <scoreAvg>85.0</scoreAvg>
+  </student>
+  <student>
+    <id>1003</id>
+    <name>小李</name>
+    <gender>女</gender>
+    <scoreSum>480.0</scoreSum>
+    <scoreAvg>96.0</scoreAvg>
+  </student>
+  <student>
+    <id>1004</id>
+    <name>小王</name>
+    <gender>男</gender>
+    <scoreSum>390.0</scoreSum>
+    <scoreAvg>78.0</scoreAvg>
+  </student>
+  <student>
+    <id>1005</id>
+    <name>小红</name>
+    <gender>女</gender>
+    <scoreSum>430.0</scoreSum>
+    <scoreAvg>86.0</scoreAvg>
+  </student>
+</students>
