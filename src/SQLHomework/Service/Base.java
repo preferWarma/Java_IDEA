@@ -15,7 +15,7 @@ public class Base {
     private static final Scanner scanner = new Scanner(System.in);
 
     //登录
-    public static User logOn() throws SQLException, NoSuchAlgorithmException {
+    public static User logOn() throws SQLException, NoSuchAlgorithmException, NoSuchFieldException, IllegalAccessException, InstantiationException {
         System.out.println("欢迎使用小刘超市收银系统, 请登陆");
         int chance = 3;
         String userName;
@@ -25,7 +25,7 @@ public class Base {
             userName = scanner.nextLine();
             System.out.println("请输入密码: ");
             password = scanner.nextLine();
-            if (Check.userCorrect(userName,password)) {
+            if (Check.userCorrect(userName, password)) {
                 break;
             } else {
                 System.out.println("用户名或密码不正确");

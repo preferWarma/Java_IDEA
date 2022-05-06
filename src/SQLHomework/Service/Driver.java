@@ -25,7 +25,7 @@ public class Driver {
     private static final String xlsPath = "C:\\Users\\2961884371\\Desktop\\Program Text\\Java\\Java_IDEA\\SQLHomeworkData\\xls\\product.xls";
     private static final String txtPath = "C:\\Users\\2961884371\\Desktop\\Program Text\\Java\\Java_IDEA\\SQLHomeworkData\\txt\\product.txt";
 
-    public static void main(String[] args) throws SQLException, NoSuchAlgorithmException, ClassNotFoundException, ParseException, WriteException, IOException, BiffException {
+    public static void main(String[] args) throws SQLException, NoSuchAlgorithmException, ClassNotFoundException, ParseException, WriteException, IOException, BiffException, NoSuchFieldException, IllegalAccessException, InstantiationException {
         //当前用户
         User user = Base.logOn();
         if (user == null) {
@@ -43,8 +43,7 @@ public class Driver {
                 case 3: //商品维护
                     if (!user.getRole().equals("管理员")) {
                         System.out.println("当前用户没有执行该项功能的权限");
-                    }
-                    else {
+                    } else {
                         boolean flag1 = true;
                         while (flag1) {
                             int choice1 = Base.sonMenu1();
@@ -57,7 +56,7 @@ public class Driver {
                                 case 2: //从文本文件中导入数据
                                     ArrayList<Product> arrayList2 = DAOForTxt.inputHelp(txtPath);
                                     int num2 = DAOForProduct.input(arrayList2);
-                                    System.out.println("成功从excel文件中导入" + num2 + "条商品数据");
+                                    System.out.println("成功从文本文件中导入" + num2 + "条商品数据");
                                     break;
                                 case 3: //键盘输入
                                     if (DAOForProduct.addProductFromConsole())
@@ -110,8 +109,7 @@ public class Driver {
                         System.out.println("欢迎下次继续使用");
                         DB.closeConnection(); //关闭数据库连接
                         System.exit(0);
-                    }
-                    else
+                    } else
                         break;
             }
         }

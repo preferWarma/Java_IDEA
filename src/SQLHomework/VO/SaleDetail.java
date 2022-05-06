@@ -79,4 +79,17 @@ public class SaleDetail {
     public void setSaleTime(String saleTime) {
         this.saleTime = saleTime;
     }
+
+    @Override
+    public String toString() {
+        return "SaleDetail{" +
+                "lsh='" + lsh + '\'' +
+                ", barCode='" + barCode + '\'' +
+                ", productName='" + productName + '\'' +
+                ", price=" + price +
+                ", count=" + count +
+                ", operator='" + operator + '\'' +
+                ", saleTime='" + saleTime + '\'' +
+                '}';
+    }
 }

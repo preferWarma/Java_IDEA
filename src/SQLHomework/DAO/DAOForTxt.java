@@ -22,14 +22,14 @@ public class DAOForTxt {
         scanner.nextLine(); //第一行是数据说明
         while (scanner.hasNextLine()) {
             String[] infos = scanner.nextLine().split(" ");
-            arrayList.add(new Product(infos[0],infos[1], BigDecimal.valueOf(Double.parseDouble(infos[2])),infos[3]));
+            arrayList.add(new Product(infos[0], infos[1], BigDecimal.valueOf(Double.parseDouble(infos[2])), infos[3]));
         }
         scanner.close();
         return arrayList;
     }
 
     //销售信息数据导出txt
-    public static int output(String fatherPath) throws FileNotFoundException, SQLException {
+    public static int output(String fatherPath) throws FileNotFoundException, SQLException, NoSuchFieldException, IllegalAccessException, InstantiationException {
         ArrayList<SaleDetail> arrayList = DAOForSaleDetail.getInfo();
         if (arrayList.size() < 1)
             return 0;
@@ -45,9 +45,8 @@ public class DAOForTxt {
             ans.append(saleDetail.getSaleTime()).append("\n");
         }
         Date date = new Date();
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");//设置日期格式
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");//设置日期格式
         String dateStr = simpleDateFormat.format(date);
-        dateStr = dateStr.replace("-","");
         PrintWriter writer = new PrintWriter(fatherPath + "\\saleDetail" + dateStr + ".txt");
         writer.write(ans.toString());
         writer.close();

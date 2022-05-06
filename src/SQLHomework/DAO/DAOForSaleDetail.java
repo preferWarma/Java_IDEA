@@ -2,35 +2,35 @@ package SQLHomework.DAO;
 
 import SQLHomework.DataBase.DB;
 import SQLHomework.VO.SaleDetail;
+import org.jetbrains.annotations.NotNull;
 
-import java.math.BigDecimal;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class DAOForSaleDetail {
 
-    private static final Connection connection = DB.getConnection();
-
     //获取数据库中的销售信息
-    public static ArrayList<SaleDetail> getInfo() throws SQLException {
-        ArrayList<SaleDetail> arrayList = new ArrayList<>();
+    public static @NotNull ArrayList<SaleDetail> getInfo() throws SQLException, NoSuchFieldException, IllegalAccessException, InstantiationException {
         String sql = "select * from homework_java.saledetail";
-        PreparedStatement preparedStatement = connection.prepareStatement(sql);
-        ResultSet resultSet = preparedStatement.executeQuery();
-        while (resultSet.next()) {
-            String lsh = resultSet.getString("lsh");
-            String barCode = resultSet.getString("barCode");
-            String productName = resultSet.getString("productName");
-            BigDecimal price = resultSet.getBigDecimal("price");
-            int count = resultSet.getInt("count");
-            String saleTime = resultSet.getString("saleTime");
-            String chrName = resultSet.getString("operator");
-            arrayList.add(new SaleDetail(lsh,barCode,productName,price,count,saleTime,chrName));
-        }
-        return arrayList;
+        return DB.query(sql, SaleDetail.class);
     }
 
+    //流水号自增
+    public static @NotNull String createNumber() throws SQLException, NoSuchFieldException, IllegalAccessException, InstantiationException {    //产生流水号
+        int count = getCount();
+        Date date = new Date();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
+        return simpleDateFormat.format(date) + String.format("%04d", count + 1);
+    }
+
+    //获取当日流水单数
+    public static int getCount() throws SQLException, NoSuchFieldException, IllegalAccessException, InstantiationException {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        String dateStr = simpleDateFormat.format(new Date());
+        String sql = "select * from homework_java.saledetail where saleTime like ?";
+        ArrayList<SaleDetail> arrayList = DB.query(sql, SaleDetail.class, dateStr + "%");
+        return arrayList.size();
+    }
 }

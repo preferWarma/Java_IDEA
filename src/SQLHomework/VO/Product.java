@@ -49,4 +49,14 @@ public class Product {
     public void setSupply(String supply) {
         this.supply = supply;
     }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "barCode='" + barCode + '\'' +
+                ", productName='" + productName + '\'' +
+                ", price=" + price +
+                ", supply='" + supply + '\'' +
+                '}';
+    }
 }
