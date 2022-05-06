@@ -69,9 +69,9 @@ public class DAOForXls {
             sheet.addCell(label);
             label = new Label(4, row, String.valueOf(saleDetail.getPrice()));
             sheet.addCell(label);
-            label = new Label(5, row, saleDetail.getOperator());
+            label = new Label(5, row, saleDetail.getSaleTime());
             sheet.addCell(label);
-            label = new Label(6, row, saleDetail.getSaleTime());
+            label = new Label(6, row, saleDetail.getOperator());
             sheet.addCell(label);
             row++;
         }

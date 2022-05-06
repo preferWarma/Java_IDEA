@@ -41,8 +41,8 @@ public class DAOForTxt {
             ans.append(saleDetail.getProductName()).append(" ");
             ans.append(saleDetail.getPrice()).append(" ");
             ans.append(saleDetail.getCount()).append(" ");
-            ans.append(saleDetail.getOperator()).append(" ");
-            ans.append(saleDetail.getSaleTime()).append("\n");
+            ans.append(saleDetail.getSaleTime()).append(" ");
+            ans.append(saleDetail.getOperator()).append("\n");
         }
         Date date = new Date();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");//设置日期格式
